@@ -20,7 +20,7 @@ bash clonerepos.sh ros.list
 4. Run the following command for jetsons or computers that are CUDA enabled
 
 ```
-bash clonerepos.sh jetson.list
+bash clonerepos.sh cuda.list
 ```
 
 5. Enter the AU password for the gitlab server.
