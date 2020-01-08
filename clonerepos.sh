@@ -2,7 +2,9 @@
 
 readarray array <<< $( cat "$@" )
 
+echo "AU username"
 read gitusername
+echo "AU password"
 read gitpassword
 
 #mkdir -p ~/git && cd ~/git
