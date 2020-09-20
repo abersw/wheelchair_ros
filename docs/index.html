@@ -1,0 +1,1697 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
+	<meta HTTP-EQUIV="Expires" CONTENT="-1">
+	<title>Tomos Fearn | PhD</title>
+
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+	 <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> 
+	
+
+	<link rel="stylesheet" href="mystyle.css" type="text/css" />
+	  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load('current', {'packages':['gantt']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'Task ID');
+      data.addColumn('string', 'Task Name');
+      data.addColumn('string', 'Resource');
+      data.addColumn('date', 'Start Date');
+      data.addColumn('date', 'End Date');
+      data.addColumn('number', 'Duration');
+      data.addColumn('number', 'Percent Complete');
+      data.addColumn('string', 'Dependencies');
+
+      data.addRows([
+        ['PhD', 'PhD', 'PhD',
+         new Date(2018, 9, 30), new Date(2021, 9, 30), null, 30, null],
+        ['Year 1', 'Year 1', 'year1',
+         new Date(2018, 9, 30), new Date(2019, 9, 30), null, 80, null],
+        ['Year 2', 'Year 2', 'year2',
+         new Date(2019, 9, 30), new Date(2020, 9, 30), null, 0, null],
+        ['Year 3', 'Year 3', 'year 3',
+         new Date(2020, 9, 30), new Date(2021, 9, 30), null, 0, null],
+
+        ['Gazebo Model', 'Gazebo Model', 'ros',
+         new Date(2019, 5, 1), new Date(2019, 6, 1), null, 50, null],
+        ['LiNX Controller', 'LiNX Controller', 'wheelchair',
+         new Date(2019, 5, 1), new Date(2019, 9, 1), null, 50, null],
+        ['Object Detection - Jetson', 'Object Detection - Jetson', 'vision',
+         new Date(2019, 3, 30), new Date(2019, 9, 30), null, 80, null],
+        ['Room Context', 'Room Context', 'vision',
+         new Date(2019, 6, 30), new Date(2019, 8, 30), null, 75, null],
+        ['Topological Mapping', 'Topological Mapping', 'ros',
+         new Date(2019, 7, 30), new Date(2019, 9, 30), null, 0, null],
+        ['Stereo Segmentation', 'Stereo Segmentation', 'ros vision',
+         new Date(2019, 9, 30), new Date(2019, 12, 30), null, 0, null],
+        ['Training DNN from Stero Images', 'Training DNN from Stero Images', 'ros vision',
+         new Date(2019, 10, 30), new Date(2020, 1, 30), null, 0, null],
+        ['HCI - Voice Interface', 'HCI - Voice Interface', 'ros HCI',
+         new Date(2019, 12, 30), new Date(2020, 1, 30), null, 0, null],
+        ['Experiments - Further Training', 'Experiments - Further Training', 'experiments',
+         new Date(2020, 1, 31), new Date(2020, 4, 30), null, 0, null],
+         ['Experiments - Wheelchair', 'Experiments - Wheelchair', 'experiments',
+         new Date(2020, 2, 31), new Date(2020, 5, 30), null, 0, null],
+        ['Experiments - Writeup', 'Experiments - Writeup', 'experiments',
+         new Date(2020, 3, 31), new Date(2020, 6, 30), null, 0, null],
+      ]);
+
+      var options = {
+        height: 500,
+        gantt: {
+          trackHeight: 30
+        }
+      };
+
+      var chart = new google.visualization.Gantt(document.getElementById('gantt'));
+
+      chart.draw(data, options);
+    }
+  </script>
+
+</head>
+<body>
+
+<div id="header" class="header">
+	
+</div>
+
+	<p>Last Updated: 
+<script type="text/javascript">
+	document.write (document.lastModified);
+</script></p>
+
+	<h1 style="text-align: center" id="home">Autonomous Wheelchair Navigation</h1>
+	<p style="text-align: center">
+		This page is my own blog for the PhD, this will include tasks, some time management and an up-to-date version of documents, assignments and publications.
+	</p>
+
+
+	<h2>Contents</h2>
+	<div style="overflow-x:auto;">
+    <table class="table table-borderless table-striped table-earning altrowtable">
+		<tr>
+			<th>Weekly Tasks</th>
+			<th>Modules</th>
+			<th>Reading</th>
+			<th>Software</th>
+			<th>Publications</th>
+		</tr>
+		<tr>
+			<td><a href="#home">Home</a></td>
+			<td><a href="modules/">Modules</a></td>
+			<td></td>
+			<td><a href="wheelchair">Wheelchair</a></td>
+			<td><a href="publications">Publications</a></td>
+		</tr>
+		<tr>
+			<td><a href="#calendar">Calendar</a></td>
+			<td><a href="#csd01">CSD01</a></td>
+			<td></td>
+			<td><a href="vision">Computer Vision</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td><a href="#deadlines">Deadlines</a></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+	<hr />
+
+	<h2 id="calendar">Calendar</h2>
+	<p>Below is the schedule of upcoming events.</p>
+	<div style="overflow-x:auto;">
+        <table class="table table-borderless table-striped table-earning altrowtable">
+                <tr>
+                    <th>Date</th>
+                    <th>Day</th>
+                    <th>Time</th>
+                    <th>Event</th>
+                    <th>Location</th>
+                </tr>
+                <tr>
+                    <td>03/06/2019</td>
+                    <td>Monday</td>
+                    <td>9:30 - 17:30</td>
+                    <td>ROS</td>
+                    <td>LL E54a</td>
+                </tr>
+
+                <tr>
+                    <td>04/06/2019</td>
+                    <td>Tuesday</td>
+                    <td>9:30 - 17:30</td>
+                    <td>ROS</td>
+                    <td>LL E54a</td>
+                </tr>
+
+                <tr>
+                    <td>05/06/2019</td>
+                    <td>Wednesday</td>
+                    <td>10:00 - 11:00</td>
+                    <td>IR Group Meeting</td>
+                    <td>LL ISL</td>
+                </tr>
+                <tr>
+                    <td>05/06/2019</td>
+                    <td>Wednesday</td>
+                    <td>15:00 - 14:00</td>
+                    <td>Robotics Week Meeting</td>
+                    <td>TBC</td>
+                </tr>
+                <tr>
+                    <td>05/06/2019</td>
+                    <td>Wednesday</td>
+                    <td>15:30 - 17:30</td>
+                    <td>Robotics Club</td>
+                    <td>MP 1.00</td>
+                </tr>
+                <tr>
+                    <td>06/06/2019</td>
+                    <td>Thursday</td>
+                    <td>9:30 - 17:30</td>
+                    <td>ROS</td>
+                    <td>LL E54a</td>
+                </tr>
+                <tr>
+                    <td>07/06/2019</td>
+                    <td>Friday</td>
+                    <td>09:00 - 10:00</td>
+                    <td>PhD Meeting</td>
+                    <td>MP 1.03</td>
+                </tr>
+                <tr>
+                    <td>07/06/2019</td>
+                    <td>Friday</td>
+                    <td>10:00 - 17:30</td>
+                    <td>ROS</td>
+                    <td>LL E54a</td>
+                </tr>
+        </table>
+    </div>
+    <div id="gantt"></div>
+	<hr />
+
+	<h2>Demonstrating</h2>
+	<p>I am demonstrating two modules this term and tutoring one group</p>
+	<ul>
+		<li>CS35320 x1 practical (2 hours) Thursday 9:00 - 11:00 - LL B57 - System and Network Services Administration</li>
+		<li>CS36010 x1 practical (2 hours) - Robotic Applications</li>
+		<li>CS18010 x1 group (1 hour) Friday 12:00 - 13:00 - CL G15 - Professional and Personal Development</li>
+	</ul>
+	<hr />
+
+	<h2 id="deadlines">My Deadlines</h2>
+	<p>Below are the list of deadlines for various tasks, assignments and events:</p>
+	
+	<hr />
+
+	<!--<h2 id="software">My Software</h2>
+	<p>Below are the links to the software I have been developing:</p>
+	<ul>
+		<li><a href="control" target="new">User Interface</a></li>
+		<li><a href="arduino" target="new">Arduino</a></li>
+	</ul>
+	<hr />-->
+
+	<h2 id="ethics">Ethics Form</h2>
+	<p>Below is the link to the ethics form submitted for my project:</p>
+	<ul>
+		<li><a href="ethics/tof7-ethics.pdf" target="new">Ethics - Autonomous Wheelchair Navigation</a></li>
+	</ul>
+	<hr />
+
+	<h2 id="mid-project-demo">Mid-Project Demonstration</h2>
+	<p><strong>Date and Time:</strong> Monday, 19th March at 12:45</p>
+	<p><strong>Room:</strong> MP-Workshop (Robotics Shed) - At the back of the Physical Sciences building.</p>
+	<ul>
+		<li><a href="kanboard" target="new">KanBoard</a></li>
+		<li><a href="control" target="new">User Interface</a></li>
+		<li><a href="control/c" target="new">C Scripts</a></li>
+		<li><a href="arduino" target="new">Arduino</a></li>
+	</ul>
+	<p>My notes for the demo | <strong><a href="mid-project-demo/mid-project-demo.pptx" target="new">PPTX</a></strong> | <strong><a href="mid-project-demo/mid-project-demo.pdf" target="new">PDF</a></strong></p>
+	<hr />
+
+	-<h2 id="bcs">BCS Show &amp; Tell</h2>
+	<p><strong>Date and Time:</strong> Friday, 20th March at 19:40</p>
+	<p><strong>Room:</strong> MP 0.15 - Physics Main</p>
+	<ul>
+		<li><a href="kanboard" target="new">KanBoard</a></li>
+		<li><a href="control" target="new">User Interface</a></li>
+		<li><a href="control/c" target="new">C Scripts</a></li>
+		<li><a href="arduino" target="new">Arduino</a></li>
+	</ul>
+	<!--<p>My notes for the demo | <strong><a href="bcs/presentation.pptx" target="new">PPTX</a></strong> | <strong><a href="bcs/presentation.pdf" target="new">PDF</a></strong></p>
+	<hr />-->
+
+
+	<h2 id="thesis">Thesis</h2>
+	<a href="dissertation/dissertation.pdf" target="new"><h3>View my Thesis</h3></a><br />
+	<table>
+		<tr><td class="tableschemename">Version</td><td class="tableschemename">State</td><td class="tableschemename">Date</td><td class="tableschemename">Changes</td></tr>
+		<tr><td>V0.1</td><td>Draft</td><td>19/11/2017</td><td>Added template</td></tr>
+	</table><br />
+	<p>Current Word Count: </p>
+	<h3>Progress</h3>
+	<table>
+		<tr><td class="tableschemename">ID</td><td class="tableschemename">Section</td><td class="tableschemename">State</td><td class="tableschemename">Date</td></tr>
+		<tr>
+			<td>0</td>
+			<td><strong>Abstract</strong></td>
+			<td>Release</td>
+			<td>14/04/2018</td>
+		</tr>
+
+		<tr>
+			<td>1</td>
+			<td><strong>Background and Objectives</strong></td>
+			<td>Release</td>
+			<td>14/04/2018</td>
+		</tr>
+
+		<tr>
+			<td>1.1</td>
+			<td>Background</td>
+			<td>Release</td>
+			<td>14/04/2018</td>
+		</tr>
+
+		<tr>
+			<td>1.2</td>
+			<td>Existing Systems</td>
+			<td>Release</td>
+			<td>14/04/2018</td>
+		</tr>
+
+		<tr>
+			<td>1.2.1</td>
+			<td>Hobby-based IoT Robots</td>
+			<td>Release</td>
+			<td>14/04/2018</td>
+		</tr>
+
+		<tr>
+			<td>1.2.2</td>
+			<td>Pioneer - Activmedia Robotic Research Platform</td>
+			<td>Release</td>
+			<td>15/04/2018</td>
+		</tr>
+
+		<tr>
+			<td>1.2.3</td>
+			<td>Robotic Operating System</td>
+			<td>Release</td>
+			<td>16/04/2018</td>
+		</tr>
+
+		<tr>
+			<td>1.3</td>
+			<td>Analysis</td>
+			<td>Release</td>
+			<td>16/04/2018</td>
+		</tr>
+
+		<tr>
+			<td>1.3.1</td>
+			<td>Concept</td>
+			<td>Release</td>
+			<td>16/04/2018</td>
+		</tr>
+
+		<tr>
+			<td>1.3.2</td>
+			<td>Microcontoller and Hardware</td>
+			<td>Release</td>
+			<td>18/04/2018</td>
+		</tr>
+
+		<tr>
+			<td>1.3.3</td>
+			<td>User Interface</td>
+			<td>Release</td>
+			<td>18/04/2018</td>
+		</tr>
+
+		<tr>
+			<td>1.3.4</td>
+			<td>Integration between the microcontroller and the UI</td>
+			<td>Release</td>
+			<td>19/04/2018</td>
+		</tr>
+
+		<tr>
+			<td>1.3.5</td>
+			<td>Interactivity</td>
+			<td>Release</td>
+			<td>19/04/2018</td>
+		</tr>
+
+		<tr>
+			<td>1.3.6</td>
+			<td>Robotic Chassis</td>
+			<td>Release</td>
+			<td>22/04/2018</td>
+		</tr>
+
+
+		<tr>
+			<td>1.4</td>
+			<td>Process</td>
+			<td>Release</td>
+			<td>21/04/2018</td>
+		</tr>
+
+		<tr>
+			<td>1.4.1</td>
+			<td>Methodology</td>
+			<td>Release</td>
+			<td>21/04/2018</td>
+		</tr>
+
+		<tr>
+			<td>1.4.2</td>
+			<td>Version Control</td>
+			<td>Release</td>
+			<td>22/04/2018</td>
+		</tr>
+
+		<tr>
+			<td>1.4.3</td>
+			<td>Blog</td>
+			<td>Release</td>
+			<td>22/04/2018</td>
+		</tr>
+
+
+
+
+
+		<tr>
+			<td>2</td>
+			<td><strong>Design</strong></td>
+			<td>Release</td>
+			<td>22/04/2018</td>
+		</tr>
+
+		<tr>
+			<td>2.1</td>
+			<td>Hardware and Data Communication</td>
+			<td>Release</td>
+			<td>22/04/2018</td>
+		</tr>
+
+		<tr>
+			<td>2.2</td>
+			<td>Arduino and Embedded Systems</td>
+			<td>Release</td>
+			<td>22/04/2018</td>
+		</tr>
+
+		<tr>
+			<td>2.3</td>
+			<td>User Interface</td>
+			<td>Release</td>
+			<td>23/04/2018</td>
+		</tr>
+
+
+
+
+		<tr>
+			<td>3</td>
+			<td><strong>Implementation</strong></td>
+			<td>Release</td>
+			<td>24/04/2018</td>
+		</tr>
+
+		<tr>
+			<td>3.1</td>
+			<td>Control Board Hardware and Electronics</td>
+			<td>Release</td>
+			<td>28/04/2018</td>
+		</tr>
+
+		<tr>
+			<td>3.2</td>
+			<td>Control Motors from the Serial</td>
+			<td>Release</td>
+			<td>26/04/2018</td>
+		</tr>
+
+		<tr>
+			<td>3.3</td>
+			<td>Read Ultrasonic values on Arduino</td>
+			<td>Release</td>
+			<td>27/04/2018</td>
+		</tr>
+
+		<tr>
+			<td>3.4</td>
+			<td>Read RFID Tags from Reader on Arduino</td>
+			<td>Release</td>
+			<td>27/04/2018</td>
+		</tr>
+
+		<tr>
+			<td>3.5</td>
+			<td>Read Temperature and Humidity on Arduino</td>
+			<td>Release</td>
+			<td>28/04/2018</td>
+		</tr>
+
+		<tr>
+			<td>3.6</td>
+			<td>Reading Battery Voltage of on-board Computers</td>
+			<td>Release</td>
+			<td>28/04/2018</td>
+		</tr>
+
+		<tr>
+			<td>3.7</td>
+			<td>Read IMU sensor on Arduino</td>
+			<td>Release</td>
+			<td>29/04/2018</td>
+		</tr>
+
+		<tr>
+			<td>3.8</td>
+			<td>Control Pan and Tilt Mechanism from the Serial</td>
+			<td>Release</td>
+			<td>29/04/2018</td>
+		</tr>
+
+		<tr>
+			<td>3.9</td>
+			<td>Demo Autonomous Behaviour</td>
+			<td>Release</td>
+			<td>29/04/2018</td>
+		</tr>
+
+		<tr>
+			<td>3.10</td>
+			<td>Raspberry Pi</td>
+			<td>Release</td>
+			<td>29/04/2018</td>
+		</tr>
+
+		<tr>
+			<td>3.10.1</td>
+			<td>Why Choose a Raspberry Pi?</td>
+			<td>Release</td>
+			<td>29/04/2018</td>
+		</tr>
+
+		<tr>
+			<td>3.10.2</td>
+			<td>Choice of Web Server Software</td>
+			<td>Release</td>
+			<td>29/04/2018</td>
+		</tr>
+
+		<tr>
+			<td>3.10.3</td>
+			<td>Let's Encrypt - SSL Certification</td>
+			<td>Release</td>
+			<td>29/04/2018</td>
+		</tr>
+
+		<tr>
+			<td>3.10.4</td>
+			<td>Deployment of Software</td>
+			<td>Release</td>
+			<td>29/04/2018</td>
+		</tr>
+
+		<tr>
+			<td>3.11</td>
+			<td>Orbiter - Communication Relay</td>
+			<td>Release</td>
+			<td>30/04/2018</td>
+		</tr>
+
+		<tr>
+			<td>3.12</td>
+			<td>PHP Logic</td>
+			<td>Release</td>
+			<td>30/04/2018</td>
+		</tr>
+
+		<tr>
+			<td>3.12.1</td>
+			<td>PHP Serial</td>
+			<td>Release</td>
+			<td>30/04/2018</td>
+		</tr>
+
+		<tr>
+			<td>3.12.2</td>
+			<td>Serial Transmission in C</td>
+			<td>Release</td>
+			<td>30/04/2018</td>
+		</tr>
+
+		<tr>
+			<td>3.12.3</td>
+			<td>Receiving Serial Data in C</td>
+			<td>Release</td>
+			<td>30/04/2018</td>
+		</tr>
+
+		<tr>
+			<td>3.12.4</td>
+			<td>Data Capture for PHP</td>
+			<td>Release</td>
+			<td>30/04/2018</td>
+		</tr>
+
+		<tr>
+			<td>3.12.5	</td>
+			<td>Reading files using PHP</td>
+			<td>Release</td>
+			<td>30/04/2018</td>
+		</tr>
+
+		<tr>
+			<td>3.12.6</td>
+			<td>Data Extraction and Exploding Strings</td>
+			<td>Release</td>
+			<td>01/05/2018</td>
+		</tr>
+
+		<tr>
+			<td>3.12.7</td>
+			<td>Data Exchange using JSON</td>
+			<td>Release</td>
+			<td>01/05/2018</td>
+		</tr>
+
+		<tr>
+			<td>3.13</td>
+			<td>User Interface</td>
+			<td>Release</td>
+			<td>01/05/2018</td>
+		</tr>
+
+		<tr>
+			<td>3.14</td>
+			<td>Content, Structure and Design</td>
+			<td>Release</td>
+			<td>01/05/2018</td>
+		</tr>
+
+		<tr>
+			<td>3.14.1</td>
+			<td>Overall Layout of Design and Functionality</td>
+			<td>Release</td>
+			<td>01/05/2018</td>
+		</tr>
+
+		<tr>
+			<td>3.15</td>
+			<td>Motor and Servo Actions</td>
+			<td>Release</td>
+			<td>01/05/2018</td>
+		</tr>
+
+		<tr>
+			<td>3.15.1</td>
+			<td>Javascript and Events</td>
+			<td>Release</td>
+			<td>01/05/2018</td>
+		</tr>
+
+		<tr>
+			<td>3.16</td>
+			<td>Displaying Sensor Data</td>
+			<td>Release</td>
+			<td>01/05/2018</td>
+		</tr>
+
+		<tr>
+			<td>3.16.1</td>
+			<td>Display Ultrasonic Data</td>
+			<td>Release</td>
+			<td>01/05/2018</td>
+		</tr>
+
+		<tr>
+			<td>3.16.2</td>
+			<td>Display Temperature/Humidity, Voltage and IMU Data</td>
+			<td>Release</td>
+			<td>02/05/2018</td>
+		</tr>
+
+		<tr>
+			<td>3.17</td>
+			<td>Rock Analysis</td>
+			<td>Release</td>
+			<td>02/05/2018</td>
+		</tr>	
+
+		<tr>
+			<td>3.17.1</td>
+			<td>RFID - Rock Lookup Table</td>
+			<td>Release</td>
+			<td>02/05/2018</td>
+		</tr>	
+
+		<tr>
+			<td>3.18</td>
+			<td>Display Camera and Filters</td>
+			<td>Release</td>
+			<td>02/05/2018</td>
+		</tr>		
+
+		<tr>
+			<td>3.18.1</td>
+			<td>Emulating AUPE</td>
+			<td>Release</td>
+			<td>02/05/2018</td>
+		</tr>
+
+		<tr>
+			<td>3.18.2</td>
+			<td>Pi Camera and Python</td>
+			<td>Release</td>
+			<td>02/05/2018</td>
+		</tr>
+
+		<tr>
+			<td>3.18.3</td>
+			<td>Pi Camera Imaging and CFX Filters</td>
+			<td>Release</td>
+			<td>02/05/2018</td>
+		</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<tr>
+			<td>4</td>
+			<td><strong>Testing</strong></td>
+			<td>Release</td>
+			<td>02/05/2018</td>
+		</tr>
+
+		<tr>
+			<td>4.1</td>
+			<td>Arduino and Embedded Systems</td>
+			<td>Release</td>
+			<td>02/05/2018</td>
+		</tr>
+
+		<tr>
+			<td>4.2</td>
+			<td>Raspberry Pi and Communications</td>
+			<td>Release</td>
+			<td>02/05/2018</td>
+		</tr>
+
+		<tr>
+			<td>4.3</td>
+			<td>User Interface</td>
+			<td>Release</td>
+			<td>03/05/2018</td>
+		</tr>
+
+		<tr>
+			<td>4.4</td>
+			<td>Testing Pipeline of Communication Layers</td>
+			<td>Release</td>
+			<td>03/05/2018</td>
+		</tr>
+
+
+
+
+
+
+
+
+		<tr>
+			<td>5</td>
+			<td><strong>Evaluation</strong></td>
+			<td>Release</td>
+			<td>03/05/2018</td>
+		</tr>
+
+		<tr>
+			<td>5.1</td>
+			<td>Evaluation of Requirements</td>
+			<td>Release</td>
+			<td>03/05/2018</td>
+		</tr>
+
+		<tr>
+			<td>5.2</td>
+			<td>Critical Evaluation</td>
+			<td>Release</td>
+			<td>04/05/2018</td>
+		</tr>
+
+		<tr>
+			<td>5.2.1</td>
+			<td>IMU Data</td>
+			<td>Release</td>
+			<td>04/05/2018</td>
+		</tr>
+
+		<tr>
+			<td>5.2.2</td>
+			<td>Asynchronous Communication</td>
+			<td>Release</td>
+			<td>04/05/2018</td>
+		</tr>
+
+		<tr>
+			<td>5.2.3</td>
+			<td>Ultrasonics</td>
+			<td>Release</td>
+			<td>04/05/2018</td>
+		</tr>
+
+		<tr>
+			<td>5.2.4</td>
+			<td>Testing</td>
+			<td>Release</td>
+			<td>04/05/2018</td>
+		</tr>
+
+		<tr>
+			<td>5.3</td>
+			<td>Evaluation of Designs</td>
+			<td>Release</td>
+			<td>04/05/2018</td>
+		</tr>
+
+		<tr>
+			<td>5.4</td>
+			<td>Evaluation of Tools Used</td>
+			<td>Release</td>
+			<td>04/05/2018</td>
+		</tr>
+
+		<tr>
+			<td>5.5</td>
+			<td>Evaluation of Process</td>
+			<td>Release</td>
+			<td>04/05/2018</td>
+		</tr>
+
+		<tr>
+			<td>5.6</td>
+			<td>Future Work and Development</td>
+			<td>Release</td>
+			<td>04/05/2018</td>
+		</tr>
+
+
+
+
+
+		<tr>
+			<td>Appendix A</td>
+			<td>Third-Party Code</td>
+			<td>Release</td>
+			<td>03/05/2018</td>
+		</tr>
+
+		<tr>
+			<td>Appendix B</td>
+			<td>Ethics</td>
+			<td>Release</td>
+			<td>03/05/2018</td>
+		</tr>
+
+		<tr>
+			<td>Appendix C</td>
+			<td>Code Examples</td>
+			<td>Release</td>
+			<td>03/05/2018</td>
+		</tr>
+
+		<tr>
+			<td>Appendix D</td>
+			<td>Serial Communication API</td>
+			<td>Release</td>
+			<td>03/05/2018</td>
+		</tr>
+
+		<tr>
+			<td></td>
+			<td>Annotated Bibliography</td>
+			<td>Release</td>
+			<td>03/05/2018</td>
+		</tr>
+
+	</table><br />
+	<hr />
+
+
+
+
+
+
+
+	<h2 id="demo">Project Demonstration</h2>
+	<p><strong>Date and Time:</strong> Tuesday, 15th May at 11:00</p>
+	<p><strong>Room:</strong> MP-Workshop (Robotics Shed) - At the back of the Physical Sciences building.</p>-->
+	<ul>
+		<li><a href="kanboard" target="new">KanBoard</a></li>
+		<li><a href="control" target="new">User Interface</a></li>
+		<li><a href="control/c" target="new">C Scripts</a></li>
+		<li><a href="arduino" target="new">Arduino</a></li>
+	</ul>-->
+	<!--<p>My notes for the demo | <strong><a href="demo/demo.pptx" target="new">PPTX</a></strong> | <strong><a href="demo/demo.pdf" target="new">PDF</a></strong></p>
+	<hr />-->
+
+
+	<h2 id="ir">Project Demonstration - Intelligent Robotics Group</h2>
+	<p><strong>Date and Time:</strong> Wednesday, 23rd May at 12:00</p>
+	<p><strong>Room:</strong> MP-3.03.</p>-->
+	<ul>
+		<li><a href="kanboard" target="new">KanBoard</a></li>
+		<li><a href="control" target="new">User Interface</a></li>
+		<li><a href="control/c" target="new">C Scripts</a></li>
+
+		<li><a href="arduino" target="new">Arduino</a></li>
+	</ul>
+	<p>My notes for the demo | <strong><a href="ir/demo.pptx" target="new">PPTX</a></strong> | <strong><a href="ir/demo.pdf" target="new">PDF</a></strong></p>
+	<hr />
+
+
+
+
+
+    <h2 id="csd01">CSD01 Seminars</h2>
+    <p>CSD01 Module - Wednesdays 11:00-12:00</p>
+    <ul>
+    	<li>Nov 7th - Clive King</li>
+    	<li>Nov 14th - Asif, Pete</li>
+    	<li>Nov 28th - Rhydian, Jing</li>
+    	<li>Dec12th - Pu, Nashid</li>
+    	<li>Xmas break</li><br />
+    	<li>Feb 6th - Shivang, Robert</li>
+    	<li>Feb 20th - Morteza, Daniel</li>
+    	<li>Mar 6th - Kieran, James</li>
+    	<li>Mar 20th - Aga, Sam</li>
+    	<li>Mar 27th - Tom C, Tom F</li>
+    	<li>April 3rd - Arshad, Melissa</li>
+    </ul>-->
+    <hr />
+
+
+
+
+    <h2 style="margin-top: 0.2em;" id="blog">Blog</h2><br />
+    <div style="overflow-x:auto;">
+    	<table class="altrowtable">
+    		<tr>
+    			<th>Date</th>
+    			<th>Time Taken</th>
+    			<th>Information</th>
+    		</tr>
+
+    		<tr>
+    			<td>24th April 2018</td>
+    			<td>4 hours</td>
+    			<td>
+    				<h2>Implementation</h2>
+    				<p>Today I started to work on the implementation section, this will take the longest to complete because it is the biggest section of the report. It should be the easier than the previous section as it explains the engineering I have done to finish the project (my own work). This section should take me up until Sunday to complete. The implementation will most likely be structured into the order I went about building the project, so it follows a story rather than grouping all interface, Raspberry Pi and hardware together.</p>
+    				<p><strong>Goal 29/04/2018:</strong> By Sunday I would like to have the implementation section done and part of the way through testing.</p></td>
+    		</tr>
+    	</table>
+    	<hr />
+
+
+
+    <h2 style="margin-top: 0.2em;" id="blog">Blog</h2><br />
+    <table class="altrowtable" style="font-size: small;">
+    	<tr>
+    		<th>Date</th>
+    		<th>Time Taken</th>
+    		<th>Information</th>
+    	</tr>
+
+    	<tr>
+    		<td>24th April 2018</td>
+    		<td>4 hours</td>
+    		<td>
+    			<h2>Implementation</h2>
+    			<p>Today I started to work on the implementation section, this will take the longest to complete because it is the biggest section of the report. It should be the easier than the previous section as it explains the engineering I have done to finish the project (my own work). This section should take me up until Sunday to complete. The implementation will most likely be structured into the order I went about building the project, so it follows a story rather than grouping all interface, Raspberry Pi and hardware together.</p>
+    			<p><strong>Goal 29/04/2018:</strong> By Sunday I would like to have the implementation section done and part of the way through testing.</p>
+    	</tr>
+
+    	<tr>
+    		<td>23rd April 2018</td>
+    		<td>8 hours</td>
+    		<td>
+    			<h2>Design</h2>
+    			<p>Today I carried on working on the design section, I created the overall architecture diagram and the Arduino and Embedded System diagram. Tomorrow I should have finished the design section, allowing the rest of the week for implementation and testing.</p>
+    			<p><strong>Goal 29/04/2018:</strong> By Sunday I would like to have the implementation section done and part of the way through testing.</p>
+    	</tr>
+
+    	<tr>
+    		<td>21th April 2018</td>
+    		<td>6 hours</td>
+    		<td>
+    			<h2>Process</h2>
+    			<p>Today I worked on the process section, this includes the methodology used during the project and the version control, use of a blog. </p>
+    			<p><strong>Goal 22/04/2018:</strong> By Sunday I would like to have the design section finished, allowing me to work all of next week on the implementation.</p>
+    	</tr>
+
+    	<tr>
+    		<td>20th April 2018</td>
+    		<td>4 hours</td>
+    		<td>
+    			<h2>Analysis and BCS show and tell</h2>
+    			<p>Today I worked on the interaction part of the analysis and discussed my progress at the tutorial. I also presented at the BCS show and tell to talk about my project, this will also be included in my report I hope. More of this can be found in the <a href="#bcs">BCS Section</a></p>
+    			<p><strong>Goal 22/04/2018:</strong> By Sunday I would like to have the design section finished, allowing me to work all of next week on the implementation.</p>
+    	</tr>
+
+    	<tr>
+    		<td>19th April 2018</td>
+    		<td>4 hours</td>
+    		<td>
+    			<h2>Analysis</h2>
+    			<p>Today I finished the requirements on the analysis section.</p>
+    			<p><strong>Goal 22/04/2018:</strong> By Sunday I would like to have the design section finished, allowing me to work all of next week on the implementation.</p>
+    	</tr>
+
+    	<tr>
+    		<td>17th April 2018</td>
+    		<td>3 hours</td>
+    		<td>
+    			<h2>Analysis</h2>
+    			<p>Today I have been working on the analysis section of the report. I now have the main content of the analysis, I just need to compare it more with the background research.</p>
+    			<p><strong>Goal 18/04/2018:</strong> By Wednesday I would like the background research, analysis and process finished. The design should be a work in progress.</p>
+    	</tr>
+
+    	<tr>
+    		<td>16th April 2018</td>
+    		<td>5 hours</td>
+    		<td>
+    			<h2>Background Research - Robotic Operating System. Analysis</h2>
+    			<p>Today I finished the Pioneer section and finsished the Robotic Operating System section, I added a case study on the Robotics Club's Tango robot. Later on in the evening I started to structure and write the start of the analysis. This will be carried on tomorrow.</p>
+    			<p><strong>Goal 18/04/2018:</strong> By Wednesday I would like the background research, analysis and process finished. The design should be a work in progress.</p>
+    	</tr>
+
+    	<tr>
+    		<td>15th April 2018</td>
+    		<td>7 hours</td>
+    		<td>
+    			<h2>Background Research - Pioneer and Robotic Operating System.</h2>
+    			<p>Today I added background research about the Pioneer and how it's hardware and Arduino, Raspberry Pi combination would be beneficial to the project. I have also started to discuss the Robotic Operating System and how the framework style would be advantageous to the project, alongside the disadvantages of course. The final software design had been influenced by the communication layer on ROS.</p>
+    			<p>Tomorrow I will finish off the background research section and hopefully finish the Analysis and Process. Once this section id done I will ask Helen to proof read the research section. The design and implementation section should be no problem to complete, testing may be more challenging in the sense that there are several languages used alongside the acceptance testing etc.</p>
+    			<p><strong>Goal 18/04/2018:</strong> By Wednesday I would like the background research, analysis and process finished. The design should be a work in progress.</p>
+    	</tr>
+
+    	<tr>
+    		<td>14th April 2018</td>
+    		<td>6 hours</td>
+    		<td>
+    			<h2>Background Research.</h2>
+    			<p>Today I started focussing "full-time" on the report. I have started adding the background research to chapter 1, so far I have added an example of robotics using the IoT technology and have started adding in a case study about the Robotics Club Pioneer.</p>
+    	</tr>
+
+
+    	<tr>
+    		<td>13th April 2018</td>
+    		<td>5 hours</td>
+    		<td>
+    			<h2>Demonstration. </h2>
+    			<p>Today I met with Helen to show the finished technical work, everything went really well and the robot carried out all the tasks and updated sensors, cameras etc.</p>
+    			<p>However, in the fashion of Friday the 13th, my car wouldn't start after the demo and then ended up in the garage with an Engine Management System fault (because of the jumpstart) and a faulty air filter sensor.</p>
+    	</tr>
+
+
+    	<tr bgcolor="#8cff66">
+    		<td>12th April 2018</td>
+    		<td>5 hours</td>
+    		<td>
+    			<h2>Completed Technical Work.</h2>
+    			<p>I finished the last requirement on my rover today, all the technical work is finished apart from tidying some code and adding a few unit tests where they have been missed out.</p>
+    			<p>Tomorrow I have a meeting with Helen to show the progress made and to see if there are any suggestions etc.</p>
+    			<p>Starting this weekend I will be focussing on the report, now that the technical work is completed.</p>
+    			<p>The blog will not stop here, I shall carry on updating it as I work on the report to give progress updates.</p>
+    		</td>
+    	</tr>
+
+
+    	<tr>
+    		<td>11th April 2018</td>
+    		<td>10 hours</td>
+    		<td>
+    			<h2>Cameras, Calibration and IMU. </h2>
+    			<p>Today I managed to get the cameras working fully, they now update every 8 seconds. Between all the pan/tilt controls is a preview of the robot's view of the surroundings. At the bottom of the screen is another set of views. Each one is from the same camera but in different "wavelengths", a different view in red, green and blue is shown alongside eachother.</p>
+    			<p>The servo mechanism has been redesigned and calibrated to work of the controls as I accidentally caught the camera mast on the top of my car when I drove it in after testing.</p>
+    			<p>I was going to add the picture representation of the IMU data today, but I couldn't get a reliable value from the IMU, therefore I used the same algorithm as the ultrasonics to create a median average of the data in order to make the data more reliable. This will be my task for tomorrow along with adding more unit tests to code.</p>
+    			<p>Below is a screenshot of the camera system in place</p>
+    			<a href="img/2018-04-11.png" target="new"><img src="img/2018-04-11.png" width="40%" alt="cameras" /></a>
+    		</td>
+    	</tr>
+
+
+		<tr>
+    		<td>9th April 2018</td>
+    		<td>6 hours</td>
+    		<td>
+    			<h2>Testing</h2>
+    			<p>Today I spent a lot of time testing the rover, so far I found that the left button caused the rover to right and vice versa, this was quickly resolved by switching the parameters around. Unfortunately the batteries ran flat before I had a chance to test out any more code as the last time it was running about, was the mid-term demo 3-4 weeks ago. I still have the picture IMU representation to test the autonomous demo.</p>
+				<p>Tomorrow I will implement these last requirements, focussing mainly on the IMU data.</p>
+				<p>I have also been working on the abstract, background and analysis section of the report, this will be published to this website once I have finished the first section.</p>
+    		</td>
+    	</tr>
+
+
+		<tr>
+    		<td>8th April 2018</td>
+    		<td>10 hours</td>
+    		<td>
+    			<h2>Fixing Bugs, Communication Delay and Demo</h2>
+    			<p>Today was spent mainly debugging the code, this includes fixing the command transmission time for simulating the gap in communication between Earth and the rover. I have also been working on the autonomous demo, this will need to be tested tomorrow to ensure everything is working. I also have to get the camera changing colours to simulate the filter wheel on PanCam. I will then have all my technical work done apart from adding some more comments and unit tests.</p>
+    		</td>
+    	</tr>
+
+
+		<tr>
+    		<td>7th April 2018</td>
+    		<td>8 hours</td>
+    		<td>
+    			<h2>Working Camera, Testing and Comments</h2>
+    			<p>Today I managed to get the camera updating via the user interface every 8 seconds, I would like to be able to add filters to the camera display to emulate the colour wheel on PanCam, this will be a secondary requirement once I finish the unit tests.</p>
+				<p>I have started working on Laurence's suggestion of an autonomous demo, the button has been implemented under the obstacle detection, the PHP logic is now communicating the command to get the Arduino to start the sequence. The Arduino will control the autonomous behaviour as the response time is much faster than communicating back to PHP. This is currently a work in progress.</p>
+				<p>I also need to record the tilt and yaw of the rover to display the pictures of the rover going up or down hill or tilting to the side, when the rover is driving around. I have the option of using HTML5 canvas to rotate the images. However, I will just use multiple images as it is much easier and send the image location through AJAX to refresh the image.</p>
+				<p>The final requirements left are:</p>
+				<ol>
+					<li>Demo Autonomous Behaviour</li>
+					<li>Display rover tilt and yaw using pictures, not raw values</li>
+					<li>Implement more unit tests and comments</li>
+				</ol>
+				<p>A lot of testing has been done to ensure that all the components and part of the user interface with communication is working, the bugs I found were:
+				<ul>
+					<li>The servo tilt up has a mind of its own</li>
+					<li>The transmission communication delay time only works for a selection of motors</li>
+					<li>Autonomous demo (Work in Progress)</li>
+				</ul>
+    		</td>
+    	</tr>
+
+
+    	<tr>
+    		<td>6th April 2018</td>
+    		<td>8 hours</td>
+    		<td>
+    			<h2>IMU, camera calibration</h2>
+    			<p>Today I mounted the camera onto the rover for the first time and centred the servos, the pan and tilt system is now complete and I am currently working on the live feed of the camera to display on the user interface. I now have IMU values appearing on the user interface, I would like to be able to rotate the images based on the inclination and tilt of the rover.</p>
+    			<p>Tomorrow I will be fixing some of the software bugs, finishing the camera feed and working on the autonomous demo. Once the requirements are finished I will complete the unit tests for my code and fill in my missing comments.</p>
+    		</td>
+    	</tr>
+
+
+    	<tr>
+    		<td>5th April 2018</td>
+    		<td>4 hours</td>
+    		<td>
+    			<h2>Synchronus Communications and Rover States</h2>
+    			<p>Today has been another really productive day, I have carried on testing the hardware and software together. The communications and logic works synchronously, therefore I have created two states whilst the rover is in operation. Driving and obstacle detection state (state 1) and interactive state (state 2), where the ultrasonic, temperature, humidity, battery voltage, rock samples are shown via the user interface. I currently have the IMU to program and return values, as well as the camera link and autonomous demo to implement. This should be finished by Sunday 8th April 2018 apart from tidying code and implementing further unit tests.</p>
+    			<p>I have also been planning and working on the final report, so I can follow the structure over the next 3-4 weeks. Updates on the report will be appearing on the blog next week (9th April 2018).</p>
+    		</td>
+    	</tr>
+
+
+    	<tr>
+    		<td>4th April 2018</td>
+    		<td>4 hours</td>
+    		<td>
+    			<h2>Successful Testing</h2>
+    			<p>This last week of code I have been working on was put to the test today. And everything worked just about first time, after some mistakes of not commenting out debug lines.</p>
+    			<p>The live sensor data from all ultrasonics, temperature, humidity and rfid(with rocky type and minerology) are now displayed on the user interface. I have the camera view, IMU and voltage sensor left to programme on the Arduino side, along with a autonomous demo. Then all will be finished!</p>
+    			<p>Unfortunately the rover has not been driving since the mid-project demo, therefore the batteries are dead and are on charge. I will test both sensors and driving together tomorrow to make sure none of the process interfere with one another.</p>
+    			<a href="img/2018-04-04.png" target="new"><img src="img/2018-04-04.png" width="40%" alt="user interface" /></a>
+    		</td>
+    	</tr>
+
+
+    	<tr>
+    		<td>2nd April 2018</td>
+    		<td>8 hours</td>
+    		<td>
+    			<h2>Milestone</h2>
+    			<p>Today was awesome and managed to glue all the code together, bearing in mind I've had family over today. </p>
+    			<p>Since the last blog entry AJAX is now fixed</p>
+    			<p>As it stands, I now have the following process working</p>
+    			<ol>
+    				<li>HTML5, Javascript request through AJAX</li>
+    				<li>AJAX request to PHP</li>
+    				<li>PHP executes the C file with the command './serial getData 0 > log.txt 2>error.txt'</li>
+    				<li>C file pipes output to the log file</li>
+    				<li>PHP reads the file and turns it to one long string variable</li>
+    				<li>PHP then "explodes" the string using a semi colon to seperate the sensors and values.</li>
+    				<li>PHP then creates to substrings one with the sensor name, the other with the sensor value, this is seperated by a colon.</li>
+    				<li>More filtering and processing is done in PHP.</li>
+    				<li>PHP sends the sensor data as an array using AJAX</li>
+    				<li>Javascript receives the array using AJAX and appends the sensor value to the corresponding position in the user interface as document IDs</li>
+    				<li>Sensors update every 8 seconds on the user interface</li>
+    			</ol>
+    			<p>I currently have the following sensors implemented in the user interface</p>
+    			<ul>
+    				<li>Ultrasonics</li>
+    				<li>RFID and rock samples</li>
+    				<li>Temperature Humidity</li>
+    				<li>Battery Voltage</li>
+    			</ul>
+    			<p>The sensors left are the camera with filters, correct Battery voltage and IMU data, as well as a demo button for autonomous control recommended by Laurence.</p>
+    			<p>Tomorrow I will be working on the Arduino code to make sure all sensors are returning the correct values i.e. IMU and voltage.<br />
+    			After that I will be working on the camera and colour filters.</p>
+    		</td>
+    	</tr>
+
+
+    	<tr>
+    		<td>29th March 2018</td>
+    		<td>10 hours</td>
+    		<td>
+    			<h2>C -> Log.txt -> PHP -> AJAX -> (BROKEN) -> HTML5</h2>
+    			<p>This afternoon I hit another milestone, I can now successfully transfer data from the executable C file to output to a txt file, which is the read by PHP. It arrives in PHP as a long string, I then use the function 'explode' which seperates the string into arrays using the semi colon as a character to seperate everything. Each 'exploded' position in the array is then put into two substrings using the 'substr' function. This creates the value 'sensor' and 'sensorvalue'</p>
+    			<p>Unfortunately AJAX prevented me from going any further as it wouldn't transfer the data from PHP variables as arrays to the user interface, at this point I am very close, because PHP doesn't use proper data types it makes it very difficult to debug.</p>
+    			<p>Below is a screenshot of the sensors as PHP variables.</p>
+    			<a href="img/2018-03-29.png" target="new"><img src="img/2018-03-29.png" width="60%" alt="Data as PHP variables" /></a>
+    		</td>
+    	</tr>
+
+
+    	<tr>
+    		<td>26th March 2018</td>
+    		<td>5 hours</td>
+    		<td>
+    			<h2>WiringSerial library and sniffing the serial port</h2>
+    			<p>This afternoon I hit another milestone, I can now successfully read data from the serial line, the problems I encountered was the timing of the Arduino reset, the C code was trying to send and receive data whilst the microcontroller was still restarting, resulting in.....nothing.</p>
+    			<p>Now the correct timing is set and it can send a string of values, I now need to tidy the output as there are trailing spaces which could be problematic during the string disection algorithm.</p>
+    			<p>Below, far left column. You can find the moment of relief when the data was received. Click the photo to enlarge.</p>
+    			<a href="img/2018-03-26.png" target="new"><img src="img/2018-03-26.png" width="60%" alt="Screenshot of receiving data" /></a>
+    		</td>
+    	</tr>
+
+
+    	<tr>
+    		<td>19th March 2018</td>
+    		<td>5 hours</td>
+    		<td>
+    			<h2>Power Distribution and Mid-Project Demo</h2>
+    			<p>Today was mid-project demo day, and I hadn't realised that there was no adaptor to power the raspberry pi off the NiMh battery, therefore I had to find a high-capacity portable mobile phone charger to power the raspberry pi for a couple of hours. I ensured that I had a copy of the code for the demo as well as the remote control version for getting the robot in and out of the car.</p>
+    			<p>The demo wen't well, everything worked as planned. It felt a bit rushed as 10 minutes to present is no where near enough time to show everything, therefore I demonstrated the robot being controlled via the user interface (motors and pan/tilt), the ultrasonic dummy values being updated as well as a presentation showing how the overall system is put together and the type of technologies that were used.</p>
+    			<p>The notes presented at the mid-project demo can be found <a href="#mid-project-demo">here</a>.</p>
+    		</td>
+    	</tr>
+
+
+    	<tr>
+    		<td>18th March 2018</td>
+    		<td>7 hours</td>
+    		<td>
+    			<h2>Motor and Servo Interaction, Mid-Project Demo</h2>
+    			<p>Today I was able to make the user interface control the motor direction and speed as well as the pan and tilt mechanism for the camera.</p>
+    			<p>For the demo I will be showing the moving robot via the user interface. The notes I have created for the mid-project demo can be found <a href="#mid-project-demo">here</a>.</p>
+    		</td>
+    	</tr>
+
+
+    	<tr>
+    		<td>17th March 2018</td>
+    		<td>9 hours</td>
+    		<td>
+    			<h2>Milestone and C Scripts</h2>
+    			<p>Today was spent implementing the C scripts to act as another layer of communication between the user interface and the Arduino.<br />
+    			I now have motor controls to the Arduino coming from arguments via the C scripts and PHP. Tomorrow I will implement the receiving part of the sensor data to the C script. It would be great to have the receiving working by the mid-term demo. Otherwise I will show the motors working and the sensor data being received via the serial monitor.</p>
+    			<p>A list of the items I will discuss for the mid-term demo will be added to the blog tomorrow, along with any other material/code/videos.</p>
+    		</td>
+    	</tr>
+
+
+    	<tr>
+    		<td>16th March 2018</td>
+    		<td>3 hours</td>
+    		<td>
+    			<h2>Some spike work using C</h2>
+    			<p>Today I started to write some code in C to open the serial connection and allow the variables from PHP to pass as arguments to C (e.g. ./comms getData. </p>
+    		</td>
+    	</tr>
+
+
+    	<tr>
+    		<td>15th March 2018</td>
+    		<td>5 hours</td>
+    		<td>
+    			<h2>Some spike work and research</h2>
+    			<p>As PHP is playing up and being very unreliable with communicating directly to the Serial port. I am going to add an extra layer to deal with the Serial connection between the USB port and the PHP logic. The PHP script will be communicating with the C Script and C will deal with all of the communications.</p>
+    		</td>
+    	</tr>
+
+
+    	<tr>
+    		<td>12th March 2018</td>
+    		<td>5 hours</td>
+    		<td>
+    			<h2>PHP is not designed to do Serial...</h2>
+    			<p>This evening I may have found out why the serial line keeps resetting.<br />
+    				An AJAX call is being sent to the PHP logic to take readings from the sensor. I have now moved and adapted the code to open up the serial line on page loads (outside the PHP logic class), the $serial parameter will need to be passed through AJAX to interact with the rest of the code.<br />
+    			As it stands, I know have a page that can open and close the serial connection when a client opens the browser. I now need to get the timing right to receive string information for disecting.</p>
+    		</td>
+    	</tr>
+
+
+    	<tr>
+    		<td>11th March 2018</td>
+    		<td>2 hours</td>
+    		<td>
+    			<h2>PHP</h2>
+    			<p>Today was spent trying to get the PHP serial communication working. No such luck yet.</p>
+    		</td>
+    	</tr>
+
+
+    	<tr>
+    		<td>10th March 2018</td>
+    		<td>8 hours</td>
+    		<td>
+    			<h2>PHP</h2>
+    			<p>Today I have found many more problems with serial communications using PHP. I tested the sensor data on the Arduino to be read via the user interface and it is continuously resetting the Arduino. Since I have a cold, I'm not going to carry on with this complicated problem until my brain has started to work again.</p>
+    		</td>
+    	</tr>
+
+
+    	<tr>
+    		<td>9th March 2018</td>
+    		<td>4 hours</td>
+    		<td>
+    			<h2>PHP</h2>
+    			<p>Today I showed the user interface updating data through PHP/AJAX. I have also been working on some of the PHP logic to implement the further hardware.</p>
+    		</td>
+    	</tr>
+
+
+    	<tr>
+    		<td>8th March 2018</td>
+    		<td>2 hours</td>
+    		<td>
+    			<h2>Raspberry Pi storage - Read/write cycles</h2>
+    			<p>From experience, the SD cards on Raspberry Pis have limited read/write cycles and can quickly corrupt if too much information is being written or read from the card. To reduce the likelihood of this from happening, I have mounted an external usb storage device to store the PHP logic and web user interface.<br />
+    			This weekend I will be testing the algorithm on the robot to see if everything works.</p>
+    		</td>
+    	</tr>
+
+
+    	<tr>
+    		<td>7th March 2018</td>
+    		<td>4 hours</td>
+    		<td>
+    			<h2>Raspberry Pi and Serial Message Disection</h2>
+    			<p>As stated in the previous blog post, I have now decided how the serial commands will be transferred between the Arduino and the Raspberry Pi.<br />
+    				I have started to design an algorithm which is split into 3 different parts.<br />
+    				<code>sensor:value;</code> the algorithm takes the first character of the string or from the last separator, to the colon which then creates a substring. From the colon to the semi colon will be another substring to store the value of the sensor. Once we have the value substring we need to cast the data to a numerical value instead of a string by 'casting'.<br />
+    			This process will take place every time the sensors are updated on the user interface.</p>
+    			<p>From now until Friday, I will need to focus on the poster for CS38220, once this has been submitted I will take this pseudo code and implement it using PHP.</p>
+    		</td>
+    	</tr>
+
+
+
+    	<tr>
+    		<td>5th March 2018</td>
+    		<td>12 hours</td>
+    		<td>
+    			<h2>Transmitting and Receiving Serial Data</h2>
+    			<p>This afternoon I managed to be able to receive reasonably reliable data over serial and display it to a test page. Now I have code that will transmit and receive data between the Arduino and PHP, I can now work on the PHP serial event detection, to reliably receive data from the Arduino without having to use Javascript intervals on the chance it picks up something on the serial line.</p>
+    			<p>I will update the blog later on tonight once I've decided how the communication will have to be altered, the likelihood is that all the sensor data will have to be combined into one big string and then dissected at the other end, rather than many small strings. As for data requests, I'm going to experiment with transmitting all sensor data from the Arduino for PHP to dissect, allowing for just motor and relay signals to be transmitted from PHP, resulting in a much more reliable (and quieter) serial line.</p>
+    			<p>Tonight I have backed up the Raspberry Pi SD card as I want to transfer all the data to a EMMC chip as a lot of read and writing is happening, I don't want to 'brick' the SD card in the Pi.<br />
+    				I have also decided how the Arduino is going to send the data to the PHP script. This can be seen below:<br />
+    				<code>ultrasonic1:val;ultrasonic2:val;ultrasonic3:val;ultrasonic4:val;ultrasonic5:val;ultrasonic6:val;temperature:val;humidity:val;rfid:val;imux:val;imuy:val;imuz:val;battery:val;</code></p>
+    			</td>
+    		</tr>
+
+
+    		<tr>
+    			<td>4th March 2018</td>
+    			<td>12 hours</td>
+    			<td>
+    				<h2>My thoughts on PHP</h2>
+    				<p>Now that my PhD application has been submitted, I can focus on the server-side software for the robot. This involves the PHP language for detecting strings of data on the Raspberry Pi serial line /dev/ttyACM0.<br />
+    				Today I have achieved transmitting commands to the Arduino via PHP, you may notice the time spent to do this one task. I have found that PHP is brilliant for server-side processing and database access etc. But if you add a hardware element, the serial timing becomes a nightmare to manage. The communication becomes slow, unpredictable, which means I may need to redesign the software to conform with the delay involved.</p>
+    				<p>At this point, I now see why there is so little documentation on serial communication with PHP - it's a nightmare to detect events on the serial line and be able to send a command and reliably return a value.</p>
+    			</td>
+    		</tr>
+
+
+    		<tr>
+    			<td>1st March 2018</td>
+    			<td>3 hours</td>
+    			<td>
+    				<h2>Late Update and Serial Comms</h2>
+    				<p>This week has been taken up by meetings and postgraduate applications, proposals and forms, therefore I haven't been able to get much done at all this week. So it's catch up time tomorrow after the AberDoc deadline.<br />
+    					In my spare time I have been able to research the unit testing libraries for PHP and JavaScript, these include <a href="https://phpunit.de/getting-started/phpunit-7.html" target="new">PHPunit7</a> and <a href="http://qunitjs.com/intro/" target="new">Qunit</a>.</p>
+    					<p>I have also set up the Raspberry Pi web server which includes Apache2 and PHP7 along with Git for being able to pull software changes. I have created a SSL certificate for the web control software, this is so I can talk about data security and prevention of hacking etc. I may also set up Basic HTTP authentication (like the one on this blog), using MD5 cryptography for passwords.</p>
+    				</td>
+    			</tr>
+
+
+    			<tr>
+    				<td>23rd February 2018</td>
+    				<td>4 hours</td>
+    				<td>
+    					<h2>Communication Protocol</h2>
+    					<p>Today I have spent some time working on the serial communication on the PHP side. At the moment I have created some test scripts, I will need to implement this into the main control interface as well as the unit tests to test all the code.</p>
+    					<p>I also had the tutorial this afternoon, the majority of the work has been behind the interface with all the communication. But I did demo the user interface.</p>
+    				</td>
+    			</tr>
+
+
+    			<tr>
+    				<td>21st February 2018</td>
+    				<td>4 hours</td>
+    				<td>
+    					<h2>User Interface Implementation and Communication Protocol</h2>
+    					<p>This afternoon I decided to carry on developing the draft version of my contol system for the robot.<br />
+    					The majority of the time was spent developing AJAX code to enable the different levels (operator's web browser) and PHP. I am using the JQuery library to help with the event detection and AJAX communication.</p>
+    					<p>The user interface can be found <a href="control/" target="new">here</a></p>
+    					<p>Currently the following features are implemented</p>
+    					<ul>
+    						<li>Interactive buttons and information and event detection without having to refresh the web page</li>
+    						<li>Buttons communicating to PHP scripts using AJAX, with feedback on motor direction and speed</li>
+    						<li>1 sample per second from sensor array stored in the PHP script</li>
+    						<li>Responsiveness of the web page for mobile/tablet</li>
+    					</ul>
+    				</td>
+    			</tr>
+
+
+    			<tr>
+    				<td>20th February 2018</td>
+    				<td>9 hours</td>
+    				<td>
+    					<h2>Spike Work and User Interface Design</h2>
+    					<p>This afternoon I decided to start working on a design for the user interface. I have hand drawn a few versions and I'm keen to implement one of them (scanned copy to come soon).<br />
+    					I decided as I'm not very artistic when it comes to CSS, to use the bootstrap framework to make the Rover control panel look modern and allowing it to respond to various screen sizes. So far I have done some spike work on implementing the user interface to determine how it will end up working with the PHP logic.</p>
+    					<p>The updated spike work UI can be found <a href="spike/mmp.php" target="new">here</a></p>
+    				</td>
+    			</tr>
+
+
+    			<tr>
+    				<td>19th February 2018</td>
+    				<td>7 hours</td>
+    				<td>
+    					<h2>Serial Communication and Spike Work</h2>
+    					<p>I have managed to get a lot done with the software today, my initial plan was just to work on the communication systems and being able to send commands to the Arduino from any serial connection, for this project the second tier will be PHP.<br />
+    					As it currently stands you can control the motors by first stating which motor you want to use, followed by the value (e.g. leftMotor:128)</p>
+    					<p>I also did some spike work to try and decide how the final system will communicate from the users end. I have already discussed plans about how it will work in the <a href="#ops">Outline Project Specification</a>, but today I actually tried out some implementation. Currently I have a PHP script which generates two random numbers between 0 and 100. Then I use AJAX to transfer to a seperate PHP page where the values are updated every second without having to refresh the entire page. This will be how the data from the Arduino will be displayed on the user interface.</p>
+    					<p>I have also started to create some draft versions of the user interface, currently it's only a few buttons as I am playing around with different layouts</p>
+    					<p>The latest code can be found <a href="arduino/v0.1_mars_rover/v0.1_mars_rover.ino" target="new">here</a></p>
+    					<p>The spike work can be found <a href="spike/" target="new">here</a></p>
+    					<p>The UI can be found <a href="spike/mmp.php" target="new">here</a></p>
+    				</td>
+    			</tr>
+
+
+    			<tr>
+    				<td>18th February 2018</td>
+    				<td>3 hours</td>
+    				<td>
+    					<h2>Research and Playing with Code</h2>
+    					<p>This afternoon and evening has been researching and playing with code to see the different methods of communication can be achieved with the Raspberry Pi. At the moment the idea is reading transmitted strings from the serial connection e.g. <code>leftMotor:128</code> and disecting it into substrings to divide the command with the instruction and the value. An example of the code can be found below:</p>
+								<!--<code>
+									for (int positionInString = 0; positionInString < inputCommand.length(); positionInString++) { <br />
+										int colonposition = 0;<br />
+										if (inputCommand.charAt(positionInString) == ':') {<br />
+											command += inputCommand.substring(0, positionInString);<br />
+											commandValueString += inputCommand.substring(positionInString +1, inputCommand.length());<br />
+											commandValue = commandValueString.toInt();<br />
+										}<br />
+									}
+								</code>-->
+								<!--<p>The new code workspace I have been working on can be found <a href="arduino/v0.1_mars_rover/v0.1_mars_rover.ino" target="new">here</a></p>
+							</td>
+						</tr>-->
+
+
+						<tr>
+							<td>16th February 2018</td>
+							<td>4 hours</td>
+							<td>
+								<h2>Portability and Tutorial</h2>
+								<p>Portability has become an issue I underestimated, therefore I needed to find a way to make the robot easier to transport from one place to the other.<br />
+								I have developed some quick code to allow me to control the robot via radio control, although it's not a requirement for the major project it is very useful as I now don't have to push it from A to B and into the back of my car.</p>
+								<p>I also took the robot to tutorials for the first time, the overall impression was positive and I had explained that I had the majority of the week was taken by hardware testing.</p>
+								<p>In the evening I also planned how the Arduino and embedded system will communicate to the Raspberry Pi (diagrams and stuff to come soon)</p>
+							</td>
+						</tr>
+
+
+						<tr>
+							<td>15th February 2018</td>
+							<td>4 hours</td>
+							<td>
+								<h2>Testing Hardware and Electronics</h2>
+								<p>To date the motors fully work using PWM signals from the Arduino, 4/6 of the ultrasonic sensors are working, I will need to either check the wiring of the other two or replace them. The RFID reader is now reading the tag ID. I just have the pan/tilt mechanism, IMU and temperature sensor left to test.</p>
+								<p>For the ultrasonic sensors I used a library called NewPing by Tim Eckel - <a href="https://playground.arduino.cc/Code/NewPing" target="new">https://playground.arduino.cc/Code/NewPing</a></p>
+								<p>The RFID reader also needed a library for communicating over the I2C protocol, this was created by Miguel Balboa - <a href="https://github.com/miguelbalboa/rfid" target="new">https://github.com/miguelbalboa/rfid</a></p>
+								<p>All the RFID tags have been registered, these are the following which correspond to the rocks:</p>
+								<p>shale - rfid:31065<br />
+									red slate - rfid:4294939994<br />
+									red sandstone - rfid:4294940250<br />
+									gabbra - rfid:4294950490<br />
+									granite - rfid:4294953473<br />
+									basalt - rfid:4294965037<br />
+								testTag - rfid:4294950729</p>
+								<img src="img/2018-02-15-1.jpg" width="20%" alt="robot" /><img src="img/2018-02-15-2.jpg" width="20%" alt="robot" />
+								<p>The test code can be found <a href="arduino/hardware_test/hardware_test.ino" target="new">here</a></p>
+							</td>
+						</tr>
+
+
+						<tr>
+							<td>13th February 2018</td>
+							<td>4 hours</td>
+							<td>
+								<h2>Testing Hardware and Electronics</h2>
+								<p>Today I carried on testing the hardware for the robot. The motors and motor relay are now working properly, although the robot soon ran out of charge. Tonight I will charge the drive batteries with 24 volts (two 12 volt batteries connected in series). At this point I will need to keep an eye on the rate of discharge on the batteries as it may interfere with reliability of sensors later on.</p>
+								<p>The test code can be found <a href="arduino/hardware_test/hardware_test.ino" target="new">here</a></p>
+							</td>
+						</tr>
+
+
+						<tr>
+							<td>12th February 2018</td>
+							<td>3 hours</td>
+							<td>
+								<h2>Testing Hardware and Electronics</h2>
+								<p>Today I started to write some code to test the hardware on-board the robot, this includes the motors, ultrasonics and rfid, my task for tomorrow will be to receive feedback from the Arduino with info from the sensors and responses from any actuators. Once this stage is complete, I can then design and plan the software based on the feedback from the outline project specification.</p>
+								<p>The test code can be found <a href="arduino/hardware_test/hardware_test.ino" target="new">here</a></p>
+							</td>
+						</tr>
+
+
+						<tr>
+							<td>11th February 2018</td>
+							<td></td>
+							<td>
+								<h2>Weekend</h2>
+								<p>Virtualising all the servers this weekend took a lot longer than anticipated, all my work is now transferred and the blog is hosted in its new location. Migrating all the servers to virtualising took all the weekend therefore, apart from the GIT repository and moving the blogs server, I haven't been able to do any work on my project.</p>
+							</td>
+						</tr>
+
+
+						<tr>
+							<td>9th February 2018</td>
+							<td>3 hours</td>
+							<td>
+								<h2>Outline Project Specification Submission and Electronics</h2>
+								<p>Unfortunately I wasn't able to make it to the tutorial today as I had to sign for a delivery at home, however I wired up and distributed the power to the ultrasonics ready for testing during the weekend</p>
+								<p>The delivery I was expecting is a new server for virtualising all the services I'm running for business, web sites. My current GIT server will be virtualised onto the new server this weekend which should greatly increase performance and work flow.</p>
+							</td>
+						</tr>
+
+
+						<tr>
+							<td>8th February 2018</td>
+							<td>4 hours</td>
+							<td>
+								<h2>Outline Project Specification and Electronics</h2>
+								<p>This afternoon I finished off the outline project specification with the improvements that Helen suggested</p>
+								<p>I also started to test the motors on the robot ready for full testing this weekend.</p>
+							</td>
+						</tr>
+
+
+						<tr>
+							<td>6th February 2018</td>
+							<td>3 hours</td>
+							<td>
+								<h2>Outline Project Specification</h2>
+								<p>Today was focussed on the outline project specification. I have finished the content of the document, I will look over it again tomorrow to check grammar and punctuation before I ask Helen to proof read it before submission.</p>
+							</td>
+						</tr>
+
+
+						<tr>
+							<td>5th February 2018</td>
+							<td>2 hours</td>
+							<td>
+								<h2>Outline Project Specification and GIT Server</h2>
+								<p>Today I had a lecture for the major project where Neil gave an example of a outline project specification, this included areas which I had not thought of adding such as the agile methodology and version control. As well as some detail on the upcoming deliverables i.e. the mid term demo and the end of project demo.</p>
+								<p>On a side note, due to the intermittent problems with my second hand, refurbished Git server, I have purchased a more powerful new server to replace the existing one by running virtualisation using Ubuntu Server OS. It has truly been a workhorse for the last 4 years, but it's time to retire it.</p>
+								<img src="https://s3.amazonaws.com/lowres.cartoonstock.com/business-commerce-network-computer_network-virtualization-network_hardware-software-jcen1336_low.jpg" width="30%" alt="cartoon" />
+							</td>
+						</tr>
+
+
+						<tr>
+							<td>4th February 2018</td>
+							<td>4 hours</td>
+							<td>
+								<h2>Outline Project Specification, Kanboard and GIT Server</h2>
+								<p>This morning I looked over my project specification and changed a lot of the grammar along with the structure. I then asked my dad to suggest improvements. I have now completed the specification and have changed the status to 0.2 review, this is so I can ask Helen to proof read and suggest improvements.<br />
+									I have also added more columns to the <a href="kanboard" target="new">Kanboard</a> for planning and testing/reviewing.<br />
+								On a side note, the server I have been using GIT for several years is starting to break down and throw errors, therefore I am currently looking for a new server to transfer all my version controlled work for the last 3 years. This will hopefully be sorted this week.</p>
+							</td>
+						</tr>
+
+
+						<tr>
+							<td>3rd February 2018</td>
+							<td>3 hours</td>
+							<td>
+								<h2>Outline Project Specification</h2>
+								<p>This evening I started working on the outline project specification and getting the main points needed down. I will carry on working on it tomorrow as I have most likely forgotten something. I'll also get my dad to look over it as a second opinion on grammar etc.</p>
+							</td>
+						</tr>
+
+
+						<tr>
+							<td>2nd February 2018</td>
+							<td>30 minutes</td>
+							<td>
+								<h2>Tutorial</h2>
+								<p>Today I had my first tutorial for the Major project where we, in turn, introduced ourselves and explained our projects. As this is the first week we didn't have much to talk about. I forgot to mention the functionality as a research rover, being able to use the camera and the rock sampler with RFID. However, I would like to leave these surprises until I have a functioning system in place to show.</p>
+								<p>The priority for now is to write up and submit the Outline Project Specification, which I could build upon from my project proposal.</p>
+								<p>This weekend I intend to complete the specification and add the draft functionality to <a href="kanboard/" target="new">Kanboard</a>, this is so I can start planning and prioritising what needs to be done first in an 'Agile' fashion.</p>
+							</td>
+						</tr>
+
+
+						<tr>
+							<td>30th January 2018</td>
+							<td>4 hours</td>
+							<td>
+								<h2>Agile Methodologies</h2>
+								<p>Tonight I have spent some time trying to decide what type of Agile Methodology would be suitable for my Major Project. I have also spent some time trying out different open source software for managing tasks and time.</p>
+								<h3>Kanban is based on three principles:</h3>
+								<ol>
+									<li><em>Visualize what you do today (workflow):</em> seeing all the items in context of each other can be very informative</li>
+									<li><em>Limit the amount of work in progress (WIP):</em> this helps balance the flow-based approach so teams don't start and commit to too much work at once</li>
+									<li><em>Enhance flow:</em> when something is finished, the next highest thing from the backlog is pulled into play</li>
+								</ol>
+								<h3>What makes Kanban a suitable methodology for my project?</h3>
+								<ul>
+									<li>No prescribed roles</li>
+									<li>Continuous Delivery</li>
+									<li>Work is pulled through the system (single piece flow)</li>
+									<li>Changes can be made at any time</li>
+									<li>Cycle time</li>
+									<li>More appropriate in operational environments with a high degree of variability in priority</li>
+								</ul>
+								<h3>The benefits of using Kanban are:</h3>
+								<ul>
+									<li>Shorter cycle times can deliver features faster.</li>
+									<li>Responsiveness to Change:</li>
+									<li>When priorities change very frequently, Kanban is ideal.</li>
+									<li>Balancing demand against throughput guarantees that most the customer-centric features are always being worked.</li>
+									<li>Requires fewer organization / room set-up changes to get started</li>
+									<li>Reducing waste and removing activities that don't add value to the team/department/organization</li>
+									<li>Rapid feedback loops improve the chances of more motivated, empowered and higher-performing team members</li>
+								</ul>
+								<p>Information on Kanban at <a href="https://www.versionone.com/what-is-kanban/" target="new">https://www.versionone.com/what-is-kanban/</a><br />
+									A rather useful download on kanban can be found <a href="https://www.versionone.com/wp-content/uploads/2015/07/Kanban_Agile_Teams.pdf" target="new">here</a></p>
+									<h3>Problems I may encounter along the way with Kanban:</h3>
+									<ul>
+										<li>Sticking to the WIP limit</li>
+										<ul>
+											<li>The difficulty of a task underestimated (overshoot the WIP limit)</li>
+											<li>Changes to the way the software works (eating into WIP cycle)</li>
+										</ul>
+									</ul>
+									<h3>Kanban Board</h3>
+									I have attempted to install an open source software which manages the Kanban board, this is web browser enabled. I will hopefully link it to the outside-world once I have managed to get a reverse proxy server working.
+								</td>
+							</tr>
+
+
+							<tr>
+								<td>29th January 2018</td>
+								<td>1.5 hours</td>
+								<td>
+									<h2>Meetings and Lectures</h2>
+									<p>Today I had my first lecture giving an introduction to the Major/Minor Project. Followed by a meeting with my supervisor Dr Helen Miles; we discussed the planning of the project including use of Agile Methodologies (potentially FFD) and using it to plan out the workload. I then set up an account for Helen to access my blog.</p>
+								</td>
+							</tr>
+
+
+							<tr>
+								<td>22nd December 2017</td>
+								<td></td>
+								<td>
+									<h2>Project Allocation and Website Update</h2>
+									<p>Today I have been allocated my project "Control Systems for an Interactive Mars Rover" and my Supervisor, Dr. Helen Miles.</p>
+									<p>I have taken the web template from my CS22120 module in second year, then adapted it for use in CS39940, to allow my dissertation and blog to be viewed.</p>
+								</td>
+							</tr>
+							<tr>
+								<td>20th November 2017</td>
+								<td>2 hours</td>
+								<td>set up the new blog site for my major project, set up the ssl certificate for http Basic authentication and pointed using the DNS to https://mmp.fearn.org.uk</td>
+							</tr>
+
+						</table>-->
+
+
+
+	<p id="footer" class="footer">
+	
+	<script type="text/javascript" src="js/header.js"></script>
+	<script type="text/javascript" src="js/footer.js"></script>
+
+
+	</p>
+</body>
+</html>

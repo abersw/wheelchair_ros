@@ -1,0 +1,136 @@
+.header
+{
+   background-color: #fc0;
+   border: 2px;
+}
+
+body
+{
+   padding-left: 10px;
+   padding-right: 10px;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   background-color: #fff;
+   /*font-family: arial, helvetica, sans-serif;*/
+}
+
+h1, h2 { margin-top: 0.1em; margin-bottom: 0.2em;}
+
+
+
+.top { color: #666; font-size: normal; font-weight: bold; }
+
+.menu
+{
+   background-color: #b3c145;
+   width: 200px;
+}
+
+li { padding-top: 0.5em;}
+
+h1, h2 { color: #7c881e; }
+
+h1, h2, h3, h4 { margin-top: 1em; margin-bottom: 0; padding-bottom: 0;}
+
+p { margin-top: 0; }
+
+.topmenu {
+   background-color: #b3c145;
+   padding: 0.3em;
+}
+
+.topmenu ul { list-style-type: none; margin: 0; padding: 0.4;}
+
+.topmenu ul li { display: inline; padding-right: 0.5em;}
+
+.topmenu ul li a { text-decoration: none; color: #fff; padding: 0.3em; }
+
+.topmenu ul li a:hover { background-color: #4b5409; }
+
+.altrowtable
+{
+   width:100%;
+   border-collapse: collapse;
+   margin-bottom: 1em;
+}
+
+.tableschemename
+{
+  background-color:#A7C942;
+  color:#ffffff;
+}
+
+.altrowtable td, .altrowtable th
+{
+   border:1px solid #98bf21;
+   padding:3px 7px 2px 7px;
+}
+
+.altrowtable th
+{
+  text-align:left;
+  padding-top:5px;
+  padding-bottom:4px;
+  background-color:#A7C942;
+  color:#ffffff;
+}
+
+.altrowtable tr.alt td,
+.altrowtable tr.r0 td
+{
+   color:#000000;
+   background-color:#EAF2D3;
+   font-weight: bold;
+}
+
+.yellowBlock
+{
+   margin: 0 0em 1em 3em;
+   font-family: serif;
+   font-size: 11pt;
+   background-color: #ffc;
+   padding: 1em;
+   border: 1px solid #aac;
+}
+
+.yellowHighlightBlock, .yellowFloatingHighlightBlock {
+   background-color: #ffc;
+   padding: 0.2em;
+   border: 1px solid #aac;
+}
+
+.yellowFloatingHighlightBlock {
+   float: right;
+   padding: 0 1em 0 0.5em;
+   margin: 0.3em;
+}
+
+.yellowFloatingHighlightBlock h3 {
+   padding: 0;
+   margin: 0;
+}
+
+img.sscc {
+   width: 100px;
+   height: 100px;
+   margin-right: 1em;
+}
+
+td.sscc {
+   width: 50%;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    /* Set the hr color */
+    color: #333; /* old IE */
+    background-color: #333; /* Modern Browsers */
+}
+
+footer {
+  font-size: small; 
+  border-top: 1px solid black; 
+  padding-top: 0.5em; 
+  margin-top: 0.5em;
+}
