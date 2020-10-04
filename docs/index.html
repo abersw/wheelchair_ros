@@ -3,7 +3,7 @@
 <head>
 	<meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
 	<meta HTTP-EQUIV="Expires" CONTENT="-1">
-	<title>Tomos Fearn | PhD</title>
+	<title>wheelchair_ros</title>
 
 	
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
@@ -21,193 +21,194 @@
 
 	<link rel="stylesheet" href="mystyle.css" type="text/css" />
 	  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-  <script type="text/javascript">
-    google.charts.load('current', {'packages':['gantt']});
-    google.charts.setOnLoadCallback(drawChart);
-
-    function drawChart() {
-
-      var data = new google.visualization.DataTable();
-      data.addColumn('string', 'Task ID');
-      data.addColumn('string', 'Task Name');
-      data.addColumn('string', 'Resource');
-      data.addColumn('date', 'Start Date');
-      data.addColumn('date', 'End Date');
-      data.addColumn('number', 'Duration');
-      data.addColumn('number', 'Percent Complete');
-      data.addColumn('string', 'Dependencies');
-
-      data.addRows([
-        ['PhD', 'PhD', 'PhD',
-         new Date(2018, 9, 30), new Date(2021, 9, 30), null, 30, null],
-        ['Year 1', 'Year 1', 'year1',
-         new Date(2018, 9, 30), new Date(2019, 9, 30), null, 80, null],
-        ['Year 2', 'Year 2', 'year2',
-         new Date(2019, 9, 30), new Date(2020, 9, 30), null, 0, null],
-        ['Year 3', 'Year 3', 'year 3',
-         new Date(2020, 9, 30), new Date(2021, 9, 30), null, 0, null],
-
-        ['Gazebo Model', 'Gazebo Model', 'ros',
-         new Date(2019, 5, 1), new Date(2019, 6, 1), null, 50, null],
-        ['LiNX Controller', 'LiNX Controller', 'wheelchair',
-         new Date(2019, 5, 1), new Date(2019, 9, 1), null, 50, null],
-        ['Object Detection - Jetson', 'Object Detection - Jetson', 'vision',
-         new Date(2019, 3, 30), new Date(2019, 9, 30), null, 80, null],
-        ['Room Context', 'Room Context', 'vision',
-         new Date(2019, 6, 30), new Date(2019, 8, 30), null, 75, null],
-        ['Topological Mapping', 'Topological Mapping', 'ros',
-         new Date(2019, 7, 30), new Date(2019, 9, 30), null, 0, null],
-        ['Stereo Segmentation', 'Stereo Segmentation', 'ros vision',
-         new Date(2019, 9, 30), new Date(2019, 12, 30), null, 0, null],
-        ['Training DNN from Stero Images', 'Training DNN from Stero Images', 'ros vision',
-         new Date(2019, 10, 30), new Date(2020, 1, 30), null, 0, null],
-        ['HCI - Voice Interface', 'HCI - Voice Interface', 'ros HCI',
-         new Date(2019, 12, 30), new Date(2020, 1, 30), null, 0, null],
-        ['Experiments - Further Training', 'Experiments - Further Training', 'experiments',
-         new Date(2020, 1, 31), new Date(2020, 4, 30), null, 0, null],
-         ['Experiments - Wheelchair', 'Experiments - Wheelchair', 'experiments',
-         new Date(2020, 2, 31), new Date(2020, 5, 30), null, 0, null],
-        ['Experiments - Writeup', 'Experiments - Writeup', 'experiments',
-         new Date(2020, 3, 31), new Date(2020, 6, 30), null, 0, null],
-      ]);
-
-      var options = {
-        height: 500,
-        gantt: {
-          trackHeight: 30
-        }
-      };
-
-      var chart = new google.visualization.Gantt(document.getElementById('gantt'));
-
-      chart.draw(data, options);
-    }
-  </script>
-
+  
 </head>
 <body>
 
 <div id="header" class="header">
 	
 </div>
-
-	<p>Last Updated: 
+<p id="lastupdated"></p>
 <script type="text/javascript">
-	document.write (document.lastModified);
-</script></p>
+	update = new Date(document.lastModified);
+	theMonth = update.getMonth() + 1;
+	theDate = update.getDate();
+	theYear = update.getFullYear();
+	//hmmm = update.get
+	//theMinute = update.theMinute()
 
-	<h1 style="text-align: center" id="home">Autonomous Wheelchair Navigation</h1>
+	
+
+
+	//var lastupdated = document.getElementById("lastupdated").innerHTML = formatAsUKDate(document.lastModified)
+	document.getElementById("lastupdated").innerHTML = "Last updated " + theDate + "/" + theMonth + "/" + theYear;
+</script></p>
+	
+	<h1 style="text-align: center" id="home">wheelchair_ros</h1>
 	<p style="text-align: center">
-		This page is my own blog for the PhD, this will include tasks, some time management and an up-to-date version of documents, assignments and publications.
+		This ros package is aimed to inform the user of the status and topics/parameters used for each package used on the wheelchair platform.
 	</p>
 
 
-	<h2>Contents</h2>
-	<div style="overflow-x:auto;">
-    <table class="table table-borderless table-striped table-earning altrowtable">
-		<tr>
-			<th>Weekly Tasks</th>
-			<th>Modules</th>
-			<th>Reading</th>
-			<th>Software</th>
-			<th>Publications</th>
-		</tr>
-		<tr>
-			<td><a href="#home">Home</a></td>
-			<td><a href="modules/">Modules</a></td>
-			<td></td>
-			<td><a href="wheelchair">Wheelchair</a></td>
-			<td><a href="publications">Publications</a></td>
-		</tr>
-		<tr>
-			<td><a href="#calendar">Calendar</a></td>
-			<td><a href="#csd01">CSD01</a></td>
-			<td></td>
-			<td><a href="vision">Computer Vision</a></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td><a href="#deadlines">Deadlines</a></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
-	</table>
-	<hr />
-
-	<h2 id="calendar">Calendar</h2>
-	<p>Below is the schedule of upcoming events.</p>
+	<h2 id="packages">ROS Packages</h2>
+	<p>Below is the packages required by the wheelchair.</p>
 	<div style="overflow-x:auto;">
         <table class="table table-borderless table-striped table-earning altrowtable">
                 <tr>
-                    <th>Date</th>
-                    <th>Day</th>
-                    <th>Time</th>
-                    <th>Event</th>
+                    <th>Package Name</th>
+                    <th>Version</th>
+                    <th>Status</th>
+                    <th>Current Branch</th>
                     <th>Location</th>
                 </tr>
                 <tr>
-                    <td>03/06/2019</td>
-                    <td>Monday</td>
-                    <td>9:30 - 17:30</td>
-                    <td>ROS</td>
-                    <td>LL E54a</td>
+                    <td>cv_bridge</td>
+                    <td>1.0</td>
+                    <td>Release</td>
+                    <td>master</td>
+                    <td><a href="https://gitlab.dcs.aber.ac.uk/tof7-ros/cv_bridge" target="new">https://gitlab.dcs.aber.ac.uk/tof7-ros/cv_bridge</a></td>
                 </tr>
 
                 <tr>
-                    <td>04/06/2019</td>
-                    <td>Tuesday</td>
-                    <td>9:30 - 17:30</td>
-                    <td>ROS</td>
-                    <td>LL E54a</td>
+                    <td>diff_drive_controller</td>
+                    <td>1.0</td>
+                    <td>Release</td>
+                    <td>master</td>
+                    <td><a href="https://gitlab.dcs.aber.ac.uk/tof7-ros/diff_drive_controller" target="new">https://gitlab.dcs.aber.ac.uk/tof7-ros/diff_drive_controller</a></td>
                 </tr>
 
-                <tr>
-                    <td>05/06/2019</td>
-                    <td>Wednesday</td>
-                    <td>10:00 - 11:00</td>
-                    <td>IR Group Meeting</td>
-                    <td>LL ISL</td>
-                </tr>
-                <tr>
-                    <td>05/06/2019</td>
-                    <td>Wednesday</td>
-                    <td>15:00 - 14:00</td>
-                    <td>Robotics Week Meeting</td>
-                    <td>TBC</td>
-                </tr>
-                <tr>
-                    <td>05/06/2019</td>
-                    <td>Wednesday</td>
-                    <td>15:30 - 17:30</td>
-                    <td>Robotics Club</td>
-                    <td>MP 1.00</td>
-                </tr>
-                <tr>
-                    <td>06/06/2019</td>
-                    <td>Thursday</td>
-                    <td>9:30 - 17:30</td>
-                    <td>ROS</td>
-                    <td>LL E54a</td>
-                </tr>
-                <tr>
-                    <td>07/06/2019</td>
-                    <td>Friday</td>
-                    <td>09:00 - 10:00</td>
-                    <td>PhD Meeting</td>
-                    <td>MP 1.03</td>
-                </tr>
-                <tr>
-                    <td>07/06/2019</td>
-                    <td>Friday</td>
-                    <td>10:00 - 17:30</td>
-                    <td>ROS</td>
-                    <td>LL E54a</td>
+				<tr>
+                    <td>espeak_ros</td>
+                    <td>0.1</td>
+                    <td>Testing</td>
+                    <td>master</td>
+                    <td><a href="https://gitlab.dcs.aber.ac.uk/tof7-ros/espeak_ros" target="new">https://gitlab.dcs.aber.ac.uk/tof7-ros/espeak_ros</a></td>
+				</tr>
+				
+				<tr>
+                    <td>mobilenet</td>
+                    <td>0.2</td>
+                    <td>Testing</td>
+                    <td>dev</td>
+                    <td><a href="https://gitlab.dcs.aber.ac.uk/tof7-ros/mobilenet" target="new">https://gitlab.dcs.aber.ac.uk/tof7-ros/mobilenet</a></td>
+				</tr>
+				
+				<tr>
+                    <td>rplidar_ros</td>
+                    <td>0.2</td>
+                    <td>Testing</td>
+                    <td>master</td>
+                    <td><a href="https://gitlab.dcs.aber.ac.uk/tof7-ros/rplidar_ros" target="new">https://gitlab.dcs.aber.ac.uk/tof7-ros/rplidar_ros</a></td>
+				</tr>
+				
+				<tr>
+                    <td>wheelchair_context</td>
+                    <td>0.1</td>
+                    <td>Testing</td>
+                    <td>dev</td>
+                    <td><a href="https://gitlab.dcs.aber.ac.uk/tof7-ros/wheelchair_context" target="new">https://gitlab.dcs.aber.ac.uk/tof7-ros/wheelchair_context</a></td>
+				</tr>
+				
+				<tr>
+                    <td>wheelchair_control</td>
+                    <td>0.1</td>
+                    <td>Testing</td>
+                    <td>dev</td>
+                    <td><a href="https://gitlab.dcs.aber.ac.uk/tof7-ros/wheelchair_control" target="new">https://gitlab.dcs.aber.ac.uk/tof7-ros/wheelchair_control</a></td>
+				</tr>
+				
+				<tr>
+                    <td>wheelchair_description</td>
+                    <td>0.2</td>
+                    <td>Testing</td>
+                    <td>dev</td>
+                    <td><a href="https://gitlab.dcs.aber.ac.uk/tof7-ros/wheelchair_description" target="new">https://gitlab.dcs.aber.ac.uk/tof7-ros/wheelchair_description</a></td>
+				</tr>
+				
+				<tr>
+                    <td>wheelchair_drivers</td>
+                    <td>0.1</td>
+                    <td>Testing</td>
+                    <td>dev</td>
+                    <td><a href="https://gitlab.dcs.aber.ac.uk/tof7-ros/wheelchair_drivers" target="new">https://gitlab.dcs.aber.ac.uk/tof7-ros/wheelchair_drivers</a></td>
+				</tr>
+				
+				<tr>
+                    <td>wheelchair_dump</td>
+                    <td>1.0</td>
+                    <td>Release</td>
+                    <td>master</td>
+                    <td><a href="https://gitlab.dcs.aber.ac.uk/tof7-ros/wheelchair_dump" target="new">https://gitlab.dcs.aber.ac.uk/tof7-ros/wheelchair_dump</a></td>
+				</tr>
+				
+				<tr>
+                    <td>wheelchair_interface</td>
+                    <td>0.1</td>
+                    <td>Testing</td>
+                    <td>dev</td>
+                    <td><a href="https://gitlab.dcs.aber.ac.uk/tof7-ros/wheelchair_interface" target="new">https://gitlab.dcs.aber.ac.uk/tof7-ros/wheelchair_interface</a></td>
+				</tr>
+				
+				<tr>
+                    <td>wheelchair_msgs</td>
+                    <td>0.1</td>
+                    <td>Testing</td>
+                    <td>dev</td>
+                    <td><a href="https://gitlab.dcs.aber.ac.uk/tof7-ros/wheelchair_context" target="new">https://gitlab.dcs.aber.ac.uk/tof7-ros/wheelchair_context</a></td>
+				</tr>
+				
+				<tr>
+                    <td>wheelchair_navigation</td>
+                    <td>0.1</td>
+                    <td>Testing</td>
+                    <td>dev</td>
+                    <td><a href="https://gitlab.dcs.aber.ac.uk/tof7-ros/wheelchair_navigation" target="new">https://gitlab.dcs.aber.ac.uk/tof7-ros/wheelchair_navigation</a></td>
+				</tr>
+				
+				<tr>
+                    <td>wheelchair_ros</td>
+                    <td>0.1</td>
+                    <td>Release</td>
+                    <td>master</td>
+                    <td><a href="https://gitlab.dcs.aber.ac.uk/tof7-ros/wheelchair_ros" target="new">https://gitlab.dcs.aber.ac.uk/tof7-ros/wheelchair_ros</a></td>
+				</tr>
+				
+				<tr>
+                    <td>wheelchair_rtabmap</td>
+                    <td>0.1</td>
+                    <td>Testing</td>
+                    <td>dev</td>
+                    <td><a href="https://gitlab.dcs.aber.ac.uk/tof7-ros/wheelchair_context" target="new">https://gitlab.dcs.aber.ac.uk/tof7-ros/wheelchair_rtabmap</a></td>
+				</tr>
+				
+				<tr>
+                    <td>wheelchair_segmentation</td>
+                    <td>0.1</td>
+                    <td>Testing</td>
+                    <td>dev</td>
+                    <td><a href="https://gitlab.dcs.aber.ac.uk/tof7-ros/wheelchair_context" target="new">https://gitlab.dcs.aber.ac.uk/tof7-ros/wheelchair_segmentation</a></td>
+				</tr>
+				
+				<tr>
+                    <td>wheelchair_sim</td>
+                    <td>0.1</td>
+                    <td>Testing</td>
+                    <td>dev</td>
+                    <td><a href="https://gitlab.dcs.aber.ac.uk/tof7-ros/wheelchair_context" target="new">https://gitlab.dcs.aber.ac.uk/tof7-ros/wheelchair_sim</a></td>
+				</tr>
+				
+				<tr>
+                    <td>wheelchair_teleop</td>
+                    <td>0.1</td>
+                    <td>Testing</td>
+                    <td>dev</td>
+                    <td><a href="https://gitlab.dcs.aber.ac.uk/tof7-ros/wheelchair_context" target="new">https://gitlab.dcs.aber.ac.uk/tof7-ros/wheelchair_teleop</a></td>
                 </tr>
         </table>
     </div>
-    <div id="gantt"></div>
+    
+	<hr />
+	<hr />
 	<hr />
 
 	<h2>Demonstrating</h2>
