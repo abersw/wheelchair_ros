@@ -205,7 +205,44 @@
                     <td><a href="https://gitlab.dcs.aber.ac.uk/tof7-ros/wheelchair_context" target="new">https://gitlab.dcs.aber.ac.uk/tof7-ros/wheelchair_teleop</a></td>
                 </tr>
         </table>
-    </div>
+	</div>
+	
+	<h2>Starting Sequence</h2>
+
+	<h2>Notes:</h2>
+	<p>robot transform can be found by running wheelchair interface/tf_listener.py</p>
+	<code>
+		rostopic pub -1 /move_base/goal move_base_msgs/MoveBaseActionGoal "header:<br />
+  seq: 0<br />
+  stamp:<br />
+    secs: 0<br />
+    nsecs: 0<br />
+  frame_id: ''<br />
+goal_id:<br />
+  stamp:<br />
+    secs: 0<br />
+    nsecs: 0<br />
+  id: ''<br />
+goal:<br />
+  target_pose:<br />
+    header:<br />
+      seq: 0<br />
+      stamp:<br />
+        secs: 0<br />
+        nsecs: 0<br />
+      frame_id: 'map'<br />
+    pose:<br />
+      position:<br />
+        x: -3.0035464748188607<br />
+        y: 1.0007878321900925<br />
+        z: 1.427680642769602e-07<br />
+      orientation:<br />
+        x: -4.32232932053e-07<br />
+        y: 4.866748911062099e-09<br />
+        z: -0.010309099663378125<br />
+        w: 0.9999468598200324" <br />
+
+	</code>
     
 	<hr />
 	<hr />
