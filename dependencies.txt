@@ -1,0 +1,62 @@
+sudo apt-get install gcc g++ libespeak1 libespeak-dev
+sudo apt-get install python2.7 python3.8
+
+#ros-dependencies for wheelchair
+sudo apt-get install ros-noetic-rosserial ros-noetic-rosserial-arduino
+sudo apt-get install ros-noetic-move-base
+sudo apt-get install ros-noetic-rtabmap
+sudo apt-get install ros-noetic-controllers
+
+sudo pip3 install rospkg
+
+#install opencv dependencies
+sudo apt-get install build-essential git cmake pkg-config
+
+Let’s install some video I/O packages:
+sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
+
+Install GTK, which handles OpenCV’s GUI operations:
+sudo apt-get install libgtk2.0-dev
+
+# We can also optimize various functions (such as matrix operations) inside OpenCV by installing these packages:
+sudo apt-get install libatlas-base-dev gfortran
+
+
+#download packages
+#folder structure
+~/opencv
+  --opencv
+  --opencv_contrib
+
+wget https://github.com/opencv/opencv/archive/4.0.0.zip
+wget https://github.com/opencv/opencv_contrib/archive/4.0.0.zip
+
+#compile instructions
+cd opencv
+mkdir build && cd build
+
+cmake -D CMAKE_BUILD_TYPE=RELEASE \
+-D CMAKE_INSTALL_PREFIX=/usr/local \
+-D INSTALL_C_EXAMPLES=ON \
+-D INSTALL_PYTHON_EXAMPLES=ON \
+-D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib/modules \
+-D BUILD_EXAMPLES=ON ..
+
+#make with number of cores
+make j4 
+sudo make install
+sudo ldconfig
+
+#python2.7 -- 
+sudo ln -s /home/tomos/opencv/opencv/build/lib/cv2.so /usr/local/lib/python2.7/dist-packages/cv2.so
+
+#python3.8 -- 
+sudo ln -s /home/tomos/opencv/opencv/build/lib/python3/cv2.cpython-36m-x86_64-linux-gnu.so /usr/local/lib/python3.6/dist-packages/
+
+
+
+
+####differences
+change top line to python3 to find rospkg
+
+
