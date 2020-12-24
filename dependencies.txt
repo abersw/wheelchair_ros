@@ -59,3 +59,5 @@ sudo ln -s /home/tomos/opencv/opencv/build/lib/python3/cv2.cpython-36m-x86_64-li
 change top line to python3 to find rospkg
 
 
+on usb devices remember to set permissions
+sudo chmod a+rw /dev/ttyACM0
