@@ -8,6 +8,7 @@ sudo apt-get install ros-noetic-rtabmap*
 sudo apt-get install ros-noetic-pcl*
 sudo apt-get install ros-noetic-message-filters
 sudo apt-get install ros-noetic-ros-control ros-noetic-ros-controllers
+sudo apt-get install ros-noetic-dwa-local-planner
 
 sudo pip3 install rospkg
 
