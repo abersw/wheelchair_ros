@@ -4,7 +4,9 @@ sudo apt-get install python2.7 python3.8
 #ros-dependencies for wheelchair
 sudo apt-get install ros-noetic-rosserial ros-noetic-rosserial-arduino
 sudo apt-get install ros-noetic-move-base
-sudo apt-get install ros-noetic-rtabmap
+sudo apt-get install ros-noetic-rtabmap*
+sudo apt-get install ros-noetic-pcl*
+sudo apt-get install ros-noetic-message-filters
 sudo apt-get install ros-noetic-ros-control ros-noetic-ros-controllers
 
 sudo pip3 install rospkg
