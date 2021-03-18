@@ -265,17 +265,18 @@
 		</ul>
 		<li>Output</li>
 		<ul>
-			<li>Location of all objects array from map frame: /wheelchair_robot/dacop/object_locations/objects</li>
+			<li>Location of all objects array from map frame: /wheelchair_robot/dacop/object_locations/detected_objects</li>
 		</ul>
 	</ul>
 	<h4>publish_object_locations</h4>
 	<ul>
 		<li>Input</li>
 		<ul>
-			<li>Locations of all objects array in map frame, from object_locations node: /wheelchair_robot/dacop/object_locations/objects</li>
+			<li>Locations of all objects array in map frame, from object_locations node: /wheelchair_robot/dacop/object_locations/detected_objects</li>
 		</ul>
 		<li>Output</li>
 		<ul>
+			<li>List of all objects in existing environment: /wheelchair_robot/dacop/publish_object_locations/objects</li>
 			<li>Output array of object locations to dacop file in wheelchair_dump package: wheelchair_dump/dump/dacop/objects.dacop</li>
 		</ul>
 	</ul>
@@ -284,7 +285,7 @@
 
 
 
-	
+
 	
 	<h2>Starting Sequence</h2>
 
