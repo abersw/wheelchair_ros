@@ -213,6 +213,78 @@
                 </tr>
         </table>
 	</div>
+
+	<h2>List of input/output topics</h2>
+	<h3>mobilenet</h3>
+	<h4>detect_and_transform.py</h4>
+	<ul>
+		<li>Inputs</li>
+		<ul>
+			<li>Physical: left camera image: /zed_node/left/image_rect_color -> /wheelchair_robot/param/left_camera</li>
+			<li>Simulator: left camera image: /wheelchair_robot/left_camera/image_raw -> /wheelchair_robot/param/left_camera</li>
+			<li>Still Photos: /still_image_publisher/image_raw -> /wheelchair_robot/param/left_camera</li>
+			<li>Confidence threshold parameter: /wheelchair_robot/param/mobilenet/confidence_threshold</li>
+		</ul>
+		<li>Outputs:</li>
+		<ul>
+			<li>Source images (original): /wheelchair_robot/mobilenet/raw_image</li>
+			<li>Annotated images (after DNN throughput): /wheelchair_robot/mobilenet/annotated_image</li>
+			<li>Object info from frames: /wheelchair_robot/mobilenet/detected_objects</li>
+		</ul>
+	</ul>
+	<h3>wheelchair_dacop</h3>
+	<h4>cloud_transform</h4>
+	<ul>
+		<li>Inputs</li>
+		<ul>
+			<li>Physical: Pointcloud source: /zed_node/point_cloud/cloud_registered -> /wheelchair_robot/param/pointcloud</li>
+			<li>Simulator: Pointcloud source: /wheelchair_robot/depth_camera/depth/points -> /wheelchair_robot/param/pointcloud</li>
+		</ul>
+		<li>Outputs</li>
+		<ul>
+			<li>Output pointcloud frame zed_left_camera_depth_link: wheelchair_robot/point_cloud</li>
+		</ul>
+	</ul>
+	<h4>depth_sensing</h4>
+	<ul>
+		<li>Input</li>
+		<ul>
+			<li>Pointcloud: /wheelchair_robot/point_cloud</li>
+			<li>Mobilenet objects detected: /wheelchair_robot/mobilenet/detected_objects</li>
+		</ul>
+		<li>Output</li>
+		<ul>
+			<li>Object depth info from pointcloud: /wheelchair_robot/dacop/depth_sensing/detected_objects</li>
+		</ul>
+	</ul>
+	<h4>object_locations</h4>
+	<ul>
+		<li>Input</li>
+		<ul>
+			<li>Object depth info from depth_sensing: /wheelchair_robot/dacop/depth_sensing/detected_objects</li>
+		</ul>
+		<li>Output</li>
+		<ul>
+			<li>Location of all objects array from map frame: /wheelchair_robot/dacop/object_locations/objects</li>
+		</ul>
+	</ul>
+	<h4>publish_object_locations</h4>
+	<ul>
+		<li>Input</li>
+		<ul>
+			<li>Locations of all objects array in map frame, from object_locations node: /wheelchair_robot/dacop/object_locations/objects</li>
+		</ul>
+		<li>Output</li>
+		<ul>
+			<li>Output array of object locations to dacop file in wheelchair_dump package: wheelchair_dump/dump/dacop/objects.dacop</li>
+		</ul>
+	</ul>
+
+
+
+
+
+	
 	
 	<h2>Starting Sequence</h2>
 
