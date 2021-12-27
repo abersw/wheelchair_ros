@@ -3,6 +3,7 @@ sudo apt-get install python2.7 python3.8
 
 #ros-dependencies for wheelchair
 sudo apt-get install ros-noetic-rosserial ros-noetic-rosserial-arduino
+sudo apt-get install ros-noetic-tf-conversions
 sudo apt-get install ros-noetic-move-base
 sudo apt-get install ros-noetic-rtabmap*
 sudo apt-get install ros-noetic-pcl*
@@ -42,7 +43,7 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 -D BUILD_EXAMPLES=ON ..
 
 #make with number of cores
-make j4 
+make -j4
 sudo make install
 sudo ldconfig
 
