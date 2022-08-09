@@ -6,6 +6,7 @@ sudo apt-get install ros-noetic-rosserial ros-noetic-rosserial-arduino
 sudo apt-get install ros-noetic-move-base ros-noetic-move-base-msgs
 sudo apt-get install ros-noetic-dwa-local-planner
 sudo apt-get install ros-noetic-rtabmap ros-noetic-rtabmap-ros
+sudo apt-get install ros-noetic-tf-conversions
 sudo apt-get install ros-noetic-pcl*
 sudo apt-get install ros-noetic-message-filters
 sudo apt-get install ros-noetic-ros-control ros-noetic-ros-controllers
@@ -43,7 +44,7 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 -D BUILD_EXAMPLES=ON ..
 
 #make with number of cores
-make j4 
+make -j4
 sudo make install
 sudo ldconfig
 
